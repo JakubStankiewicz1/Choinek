@@ -304,7 +304,7 @@ export const products = [
     description_1: "Opis drzewka",
     description_1: "Opis drzewka 2",
     images: [p1_img1, p1_img2, p1_img3],
-    lists: ["informacja_1", "informacja_2", "informacja_3"],
+    lists: ["informacja_112", "informacja_212", "informacja_312"],
     magazineData: [
       {
         size: "140-175 cm",
