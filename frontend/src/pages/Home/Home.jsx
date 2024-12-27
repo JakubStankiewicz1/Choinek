@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import Title from "../../components/Title/Title";
 import Offert from "../../components/Offert/Offert";
 import Info from "../../components/Info/Info";
+import TreePricer from "../../components/TreePricer/TreePricer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       {/* <Title text={"Choinki Warszawa - oferta"} /> */}
       <Offert />
       <Info />
+      <TreePricer />
       <p>sdf</p>
       <p>sdf</p>
       <p>sdf</p>
