@@ -1,0 +1,15 @@
+.title {
+  display: flex; /* Ustawienie Flexbox */
+  justify-content: center; /* Wyśrodkowanie na osi X */
+  align-items: center; /* Wyśrodkowanie na osi Y (opcjonalne) */
+  margin: 0 auto; /* Usunięcie nadmiarowych marginesów */
+  width: 100%; /* Element zajmuje pełną szerokość */
+  text-align: center; /* Tekst jest wyśrodkowany w środku kontenera */
+  color: #ff0000;
+}
+
+.titleComponentText {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center; /* Dodatkowe wyrównanie tekstu wewnątrz elementu */
+}

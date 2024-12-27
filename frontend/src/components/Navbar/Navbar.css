@@ -1,0 +1,77 @@
+.navbar {
+  background-color: #94040b;
+  color: #fff;
+  height: 18vh;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbarLeftSide {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLeftSideText {
+  font-size: 2.2rem;
+}
+
+.navbarMiddleSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+}
+
+.navbarMiddleSide li {
+  cursor: pointer;
+}
+
+.navbarMiddleSide li {
+  padding-bottom: 15px; /* Stały padding */
+}
+
+.navbarMiddleSide li:hover {
+  border-bottom: 4px solid white;
+  margin-bottom: -4px; /* Kompensacja nowego border */
+}
+
+.navbarMiddleSideText {
+  font-size: 1.3rem;
+}
+
+.navbarMiddleSideUnderline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbarRightSide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navbarMiddleSideImage {
+  width: 30px;
+  height: auto;
+}
+
+.navbarRightSidePhoneText {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.navbarRightSideEmailText {
+  font-size: 1.1rem;
+  font-weight: 600;
+}

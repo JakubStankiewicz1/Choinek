@@ -1,0 +1,83 @@
+.hero {
+  background-color: blue;
+  width: 100%;
+  height: 82vh;
+  color: #fff;
+
+  /* Ustawienie Flexbox dla kontenera */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start; /* Elementy zaczynają się od góry */
+  width: 80%;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.heroContainerLeftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroContainerLeftSideTextTitle {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.heroContainerLeftSideTextBold {
+  font-weight: 600;
+}
+
+.heroContainerLowText {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.heroContainerButton {
+  background-color: transparent;
+  color: #fff;
+  border: 5px solid #fff;
+  cursor: pointer;
+  transition: 0.35s ease-in-out;
+  width: 250px;
+  height: 80px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.heroContainerButton:hover {
+  background-color: #ff0000;
+  border: 5px solid #ff0000;
+}
+
+.heroContainerRightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Elementy listy zaczynają się od lewej */
+}
+
+.heroContainerRightSideList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Wyrównanie do lewej */
+  padding: 0; /* Usunięcie domyślnych odstępów */
+  margin: 0; /* Zapobiega przesunięciom */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroContainerRightSideListElement {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 10px; /* Odstępy między elementami listy */
+}
