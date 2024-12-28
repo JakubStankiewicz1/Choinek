@@ -5,10 +5,50 @@ import p1_img1 from "./p1_img1.jpg";
 import p1_img2 from "./p1_img2.jpg";
 import p1_img3 from "./p1_img3.jpg";
 
+import drzewkaOzdobne from "./drzewkaOzdobne.jpg";
+import choinki from "./choinki.jpg";
+import inne from "./inne.jpg";
+import kwiaty from "./kwiaty.jpg";
+import lampkiChoinkowe from "./lampkiChoinkowe.jpg";
+import stojaki from "./stojaki.jpg";
+
 export const assets = {
   shoppingCart,
   forest,
+  drzewkaOzdobne,
+  choinki,
+  inne,
+  kwiaty,
+  lampkiChoinkowe,
+  stojaki,
 };
+
+export const categories = [
+  {
+    name: "Drzewka ozdobne",
+    image: drzewkaOzdobne,
+  },
+  {
+    name: "Choinki",
+    image: choinki,
+  },
+  {
+    name: "Inne",
+    image: inne,
+  },
+  {
+    name: "Kwiaty",
+    image: kwiaty,
+  },
+  {
+    name: "Lampki choinkowe",
+    image: lampkiChoinkowe,
+  },
+  {
+    name: "Stojaki",
+    image: stojaki,
+  },
+];
 
 export const products = [
   {

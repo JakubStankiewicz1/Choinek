@@ -1,0 +1,70 @@
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  /* width: 75%; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  padding-bottom: 30px;
+}
+
+.orderInfoDataContainer {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: aquamarine; */
+  margin-top: 40px;
+}
+
+.orderInfoDataContainerLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.orderInfoDataContainerLeftText1,
+.orderInfoDataContainerLeftText2,
+.orderInfoDataContainerLeftText3,
+.orderInfoDataContainerLeftText4 {
+  color: #5f5f5f;
+  font-size: 16px;
+}
+
+.porderInfoDataContainerLeftPhone {
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #095002;
+}
+
+.orderInfoDataContainerLeftEmail {
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #960000;
+}
+
+.orderInfoDataContainerLeftText2 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.orderInfoDataContainerLeftText3 {
+  margin-top: 20px;
+}
+
+.orderInfoDataContainerLeftText4 {
+  margin-top: 20px;
+}
+
+.orderInfoDataContainerRight {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
