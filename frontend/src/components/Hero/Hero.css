@@ -1,23 +1,31 @@
 .hero {
-  background-color: blue;
+  position: relative;
   width: 100%;
   height: 82vh;
   color: #fff;
-
-  /* Ustawienie Flexbox dla kontenera */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .heroContainer {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-start; /* Elementy zaczynają się od góry */
+  align-items: flex-start;
   width: 80%;
-  /* margin-left: auto;
-  margin-right: auto; */
+  z-index: 1;
 }
 
 .heroContainerLeftSide {
@@ -62,15 +70,15 @@
 .heroContainerRightSide {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Elementy listy zaczynają się od lewej */
+  align-items: flex-start;
 }
 
 .heroContainerRightSideList {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Wyrównanie do lewej */
-  padding: 0; /* Usunięcie domyślnych odstępów */
-  margin: 0; /* Zapobiega przesunięciom */
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -79,5 +87,5 @@
 .heroContainerRightSideListElement {
   font-size: 22px;
   font-weight: 700;
-  margin-top: 10px; /* Odstępy między elementami listy */
+  margin-top: 10px;
 }

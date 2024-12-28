@@ -1,9 +1,14 @@
 import React from "react";
 import "./Hero.css";
+import backgroundVideo from "./forest.mp4";
 
 const Hero = () => {
   return (
     <div className="hero">
+      <video autoPlay loop muted className="heroVideo">
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="heroContainer">
         {/* Left Side */}
         <div className="heroContainerLeftSide">

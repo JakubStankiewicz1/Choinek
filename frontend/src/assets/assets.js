@@ -1,5 +1,5 @@
 import shoppingCart from "./shoppingCart.png";
-import forest from "./forest.mp4";
+// import forest from "./forest.mp4";
 
 import p1_img1 from "./p1_img1.jpg";
 import p1_img2 from "./p1_img2.jpg";
@@ -22,7 +22,7 @@ import facebook from "./facebook.png";
 
 export const assets = {
   shoppingCart,
-  forest,
+  // forest,
   drzewkaOzdobne,
   choinki,
   inne,
