@@ -21,17 +21,6 @@ const Home = () => {
       <OrderInfo />
       <Hero2 />
       <Fotter />
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
-      <p>sdf</p>
     </div>
   );
 };

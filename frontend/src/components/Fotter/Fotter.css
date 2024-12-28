@@ -1,61 +1,81 @@
 .fotter {
-  display: flex;
-  flex-direction: column;
-  background-color: lightgray;
-  margin-top: 35px;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
 }
 
 .fotterContainer {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.fotterContainerInfoSection {
+.fotterInfoSection {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
 }
 
-.fotterContainerInfoSectionLeftSide {
+.fotterSection {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.fotterHeading {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.fotterLinks {
   display: flex;
   flex-direction: column;
-}
-
-.fotterContainerInfoSectionLeftSideFirstPartList {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.fotterContainerInfoSectionLeftSideFirstPartText1 {
-  font-weight: 800;
+  gap: 10px;
 }
 
 .fotterNavLink {
-  margin-bottom: 10px;
   color: #94040b;
+  text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.fotterContainerInfoSectionLeftSideFirstPartSocialMedia img {
-  width: 20px;
-  margin-bottom: 10px;
-  height: auto;
+.fotterNavLink:hover {
+  color: #d32f2f;
+}
+
+.fotterSocialMedia .socialIcon {
+  width: 25px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
 }
 
-.fotterContainerInfoSectionLeftSideFirstPartSocialMedia img:hover {
-  transform: scale(1.1);
+.fotterSocialMedia .socialIcon:hover {
+  transform: scale(1.2);
 }
 
-.fotterContainerInfoSectionMiddleSideText1 {
-  font-weight: 800;
+.fotterMiddle address {
+  font-style: normal;
+  line-height: 1.6;
 }
 
-.fotterContainerInfoSectionRightSideImagesContainer img {
+.fotterPaymentIcons img {
   width: 50px;
-  height: auto;
+  margin-right: 10px;
+}
+
+.fotterNote {
+  margin-top: 15px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: #555;
+  text-align: justify;
 }

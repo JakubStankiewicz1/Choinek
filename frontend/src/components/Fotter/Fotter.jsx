@@ -6,80 +6,60 @@ import { NavLink } from "react-router-dom";
 
 const Fotter = () => {
   return (
-    <div className="fotter">
+    <footer className="fotter">
       <div className="fotterContainer">
-        {/* Title element */}
-        <Title text="kontakt" />
-
-        {/* Info Section */}
-        <div className="fotterContainerInfoSection">
-          {/* Left Side */}
-          <div className="fotterContainerInfoSectionLeftSide">
-            {/* First Part */}
-            <div className="fotterContainerInfoSectionLeftSideFirstPart">
-              <p className="fotterContainerInfoSectionLeftSideFirstPartText1">
-                Menu
-              </p>
-              <div className="fotterContainerInfoSectionLeftSideFirstPartList">
-                <NavLink to="/" className="fotterNavLink">
-                  Zamów online
-                </NavLink>
-                <NavLink to="/" className="fotterNavLink">
-                  Regulamin
-                </NavLink>
-                <NavLink to="/" className="fotterNavLink">
-                  Polityka prywatności
-                </NavLink>
-              </div>
-              <div className="fotterContainerInfoSectionLeftSideFirstPartSocialMedia">
-                <img src={assets.facebook} alt="" />
-              </div>
-            </div>
-
-            {/* Part with links (icons) to social media */}
-            <div className="fotterContainerInfoSectionLeftSideSecondPart"></div>
-          </div>
-
-          {/* Middle Side */}
-          <div className="fotterContainerInfoSectionMiddleSide">
-            <p className="fotterContainerInfoSectionMiddleSideText1">
-              choinek.pl
-            </p>
-            <p className="fotterContainerInfoSectionMiddleSideText2">
-              BW INWESTMENTS 1 Sp. z o.o.
-            </p>
-            <p className="fotterContainerInfoSectionMiddleSideText3">
-              ul. Foksal 3/5
-            </p>
-            <div className="fotterContainerInfoSectionMiddleSideText4">
-              00-366 Warszawa
-            </div>
-            <div className="fotterContainerInfoSectionMiddleSideText5">
-              NIP 5252763645
-            </div>
-
-            <div className="fotterContainerInfoSectionMiddleSideText6">
-              +48 690 596 694
+        <Title text="Kontakt" />
+        <div className="fotterInfoSection">
+          {/* Left Section */}
+          <div className="fotterSection fotterLeft">
+            <h4 className="fotterHeading">Menu</h4>
+            <nav className="fotterLinks">
+              <NavLink to="/" className="fotterNavLink">
+                Zamów online
+              </NavLink>
+              <NavLink to="/" className="fotterNavLink">
+                Regulamin
+              </NavLink>
+              <NavLink to="/" className="fotterNavLink">
+                Polityka prywatności
+              </NavLink>
+            </nav>
+            <div className="fotterSocialMedia">
+              <img
+                src={assets.facebook}
+                alt="Facebook"
+                className="socialIcon"
+              />
             </div>
           </div>
 
-          {/* Right Side */}
-          <div className="fotterContainerInfoSectionRightSide">
-            {/* Images Container */}
-            <div className="fotterContainerInfoSectionRightSideImagesContainer">
-              <img src={assets.mastercard} alt="" />
-              <img src={assets.visa} alt="" />
-              <img src={assets.stripe} alt="" />
-            </div>
+          {/* Middle Section */}
+          <div className="fotterSection fotterMiddle">
+            <h4 className="fotterHeading">choinek.pl</h4>
+            <address>
+              <p>BW INWESTMENTS 1 Sp. z o.o.</p>
+              <p>ul. Foksal 3/5</p>
+              <p>00-366 Warszawa</p>
+              <p>NIP: 5252763645</p>
+              <p>Tel: +48 690 596 694</p>
+            </address>
+          </div>
 
-            <p className="fotterContainerInfoSectionRightSideText">
+          {/* Right Section */}
+          <div className="fotterSection fotterRight">
+            <div className="fotterPaymentIcons">
+              <img src={assets.mastercard} alt="Mastercard" />
+              <img src={assets.visa} alt="Visa" />
+              <img src={assets.stripe} alt="Stripe" />
+            </div>
+            <p className="fotterNote">
               W sprawie zamówień specjalnych zapraszam do indywidualnego
               kontaktu. Na życzenie dekorujemy drzewka.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
