@@ -12,6 +12,8 @@ import kwiaty from "./kwiaty.jpg";
 import lampkiChoinkowe from "./lampkiChoinkowe.jpg";
 import stojaki from "./stojaki.jpg";
 
+import treeFarm from "./treeFarm.jpg";
+
 export const assets = {
   shoppingCart,
   forest,
@@ -21,6 +23,7 @@ export const assets = {
   kwiaty,
   lampkiChoinkowe,
   stojaki,
+  treeFarm,
 };
 
 export const categories = [
