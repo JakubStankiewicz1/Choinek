@@ -1,0 +1,61 @@
+.fotter {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  margin-top: 35px;
+}
+
+.fotterContainer {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fotterContainerInfoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.fotterContainerInfoSectionLeftSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.fotterContainerInfoSectionLeftSideFirstPartList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fotterContainerInfoSectionLeftSideFirstPartText1 {
+  font-weight: 800;
+}
+
+.fotterNavLink {
+  margin-bottom: 10px;
+  color: #94040b;
+  font-weight: 600;
+}
+
+.fotterContainerInfoSectionLeftSideFirstPartSocialMedia img {
+  width: 20px;
+  margin-bottom: 10px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.fotterContainerInfoSectionLeftSideFirstPartSocialMedia img:hover {
+  transform: scale(1.1);
+}
+
+.fotterContainerInfoSectionMiddleSideText1 {
+  font-weight: 800;
+}
+
+.fotterContainerInfoSectionRightSideImagesContainer img {
+  width: 50px;
+  height: auto;
+}

@@ -7,6 +7,7 @@ import Info from "../../components/Info/Info";
 import TreePricer from "../../components/TreePricer/TreePricer";
 import OrderInfo from "../../components/OrderInfo/OrderInfo";
 import Hero2 from "../../components/Hero2/Hero2";
+import Fotter from "../../components/Fotter/Fotter";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <TreePricer />
       <OrderInfo />
       <Hero2 />
+      <Fotter />
       <p>sdf</p>
       <p>sdf</p>
       <p>sdf</p>

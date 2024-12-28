@@ -14,6 +14,12 @@ import stojaki from "./stojaki.jpg";
 
 import treeFarm from "./treeFarm.jpg";
 
+import mastercard from "./mastercard.png";
+import visa from "./visa.png";
+import stripe from "./stripe.png";
+
+import facebook from "./facebook.png";
+
 export const assets = {
   shoppingCart,
   forest,
@@ -24,6 +30,10 @@ export const assets = {
   lampkiChoinkowe,
   stojaki,
   treeFarm,
+  mastercard,
+  visa,
+  stripe,
+  facebook,
 };
 
 export const categories = [
