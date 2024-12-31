@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="heroContainerLeftSideTextBold">pod drzwi.</span>
             </p>
             <p className="heroContainerLeftSideTextTitle">
-              Gwarancja realizacji w{" "}
+              Gwarancja realizacji{" "}
               <span className="heroContainerLeftSideTextBold">48 godzin</span>
             </p>
             <p className="heroContainerLowText">
