@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="heroContainerLeftSide">
           <div className="heroContainerLeftSideText">
             <p className="heroContainerLeftSideTextTitle">
-              Choinki z dostawą{" "}
+              Choinki z dostawą 4
               <span className="heroContainerLeftSideTextBold">pod drzwi.</span>
             </p>
             <p className="heroContainerLeftSideTextTitle">
