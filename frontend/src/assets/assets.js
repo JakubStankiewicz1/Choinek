@@ -22,7 +22,6 @@ import facebook from "./facebook.png";
 
 export const assets = {
   shoppingCart,
-  // forest,
   drzewkaOzdobne,
   choinki,
   inne,
