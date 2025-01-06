@@ -1,5 +1,4 @@
 import shoppingCart from "./shoppingCart.png";
-// import forest from "./forest.mp4";
 
 import p1_img1 from "./p1_img1.jpg";
 import p1_img2 from "./p1_img2.jpg";
