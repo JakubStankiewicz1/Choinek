@@ -1,3 +1,3 @@
 [] Logo navigation to "/" element
-[] Underline correction
+[X] Underline correction
 [] Contact navbar display sdaf
