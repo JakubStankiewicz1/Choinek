@@ -1,51 +1,47 @@
-import React from "react";
-import "./Hero.css";
-import backgroundVideo from "./forest.mp4";
+import React from 'react';
+import assets from '../../assets/assets';
+import './hero.css';
 
 const Hero = () => {
   return (
     <div className="hero">
-      <video autoPlay loop muted className="heroVideo">
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className="heroContainer">
+
+    <video autoPlay loop muted className="heroVideo">
+        <source src={assets.heroBackgroundVideo} type="video/mp4" />
+        {/* Your browser does not support the video tag. */}
+    </video>
+
+    {/* Text elements container */}
+    <div className="heroContainer">
         {/* Left Side */}
         <div className="heroContainerLeftSide">
-          <div className="heroContainerLeftSideText">
-            <p className="heroContainerLeftSideTextTitle">
-              Choinki z dostawą 4
-              <span className="heroContainerLeftSideTextBold">pod drzwi.</span>
-            </p>
-            <p className="heroContainerLeftSideTextTitle">
-              Gwarancja realizacji{" "}
-              <span className="heroContainerLeftSideTextBold">48 godzin</span>
-            </p>
-            <p className="heroContainerLowText">
-              lub w wybranym przez ciebie terminie
-            </p>
-          </div>
-
-          <button className="heroContainerButton">ZAMÓW TERAZ</button>
+            {/* Top Section */}
+            <div className="heroContainerLeftSideTop">
+                <p className="heroContainerLeftSideTopHeader">
+                    Choinki z dostawą <span className="heroContainerLeftSideTopHeaderSpan">pod drzwi.</span><br />
+                    Gwarancja realizacji <span className="heroContainerLeftSideTopHeaderSpan">w 48 godzin</span>
+                </p>
+                <p className="heroContainerLeftSideTopNormal">
+                    lub w wybranym przez ciebie terminie
+                </p>
+            </div>
+            {/* Bottom Section */}
+            <div className="heroContainerLeftSideBottom">
+                <button className="heroContainerLeftSideBottomBtn">ZAMÓW TERAZ</button>
+            </div>
         </div>
-
         {/* Right Side */}
         <div className="heroContainerRightSide">
-          <ul className="heroContainerRightSideList">
-            <li className="heroContainerRightSideListElement">
-              Szeroki wybór, najniższe ceny
-            </li>
-            <li className="heroContainerRightSideListElement">
-              Choinki najwyższej klasy
-            </li>
-            <li className="heroContainerRightSideListElement">
-              Każde zamówienie potwierdzamy telefonicznie
-            </li>
-          </ul>
+            <ul>
+                <li className="heroContainerRightSideElement">Szeroki wybór, najniższe ceny</li>
+                <li className="heroContainerRightSideElement">Choinki najwyższej klasy</li>
+                <li className="heroContainerRightSideElement">Każde zamówienie potwierdzamy telefonicznie</li>
+            </ul>
         </div>
-      </div>
     </div>
-  );
-};
+        
+    </div>
+  )
+}
 
-export default Hero;
+export default Hero

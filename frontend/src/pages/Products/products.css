@@ -1,0 +1,139 @@
+.products {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+
+.productContainerLeftPart {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productContainerLeftPartTop {
+    margin-bottom: 20px;
+}
+
+.productContainerLeftPartTopText {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.productContainerLeftPartMiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filterSection label {
+    font-weight: bold;
+}
+
+.filterSection input[type="range"] {
+    width: 100%;
+}
+
+.productContainerRightPart {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productContainerRightPartTitle {
+    margin-bottom: 20px;
+}
+
+.productContainerRightPartSortByContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.productContainerRightPartSortByContainerSelect {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: 500;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+}
+
+.productContainerRightPartSortByContainerSelect:focus {
+    border-color: #007bff;
+}
+
+.productContainerRightPartProductsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.productContainerRightPartProductsContainerElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.productContainerRightPartProductsContainerElement:hover {
+    transform: scale(1.05);
+}
+
+.productItemImageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.productItemTextContainerText {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.productItemInfo {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}

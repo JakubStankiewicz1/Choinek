@@ -1,47 +1,33 @@
-import React from "react";
-import { assets } from "../../assets/assets";
-import "./Navbar.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './navbar.css';
+import assets from '../../assets/assets';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="navbarContainer">
-        {/* Left Side */}
-        <div className="navbarLeftSide">
-          <Link to="/">
-            <p className="navbarLeftSideText snowburst-one-regular">
-              Choinek.pl
-            </p>
-          </Link>
+        <div className="navbarContainer">
+            <div className="navbarLeftPart">
+                <Link to="/" className="navbarLeftPartName snowburst-one-regular">Choinek.pl</Link>
+            </div>
+            <div className="navbarMiddlePart">
+                <p className="navbarMiddlePartElement"><NavLink to="/products">oferta</NavLink><div className="navbarMiddlePartUnderline" /></p>
+                <p className="navbarMiddlePartElement">cennik<div className="navbarMiddlePartUnderline" /></p>
+                <NavLink to="/our-realizations" className="navbarMiddlePartElement">nasze realizacje<div className="navbarMiddlePartUnderline" /></NavLink>
+                <NavLink to="/faq" className="navbarMiddlePartElement">faq<div className="navbarMiddlePartUnderline" /></NavLink>
+                {/* <p className="navbarMiddlePartElement">zamów online<div className="navbarMiddlePartUnderline" /></p> */}
+                <div className="navbarMiddlePartElement">
+                    <img src={assets.shoppingCart} alt="" className="navbarMiddlePartElementImg" />
+                    <div className="navbarMiddlePartUnderline" />
+                </div>
+            </div>
+            <div className="navbarRightPart">
+                <p className="navbarRightPartTop">+48 123 456 789</p>
+                <p className="navbarRightPartBottom">kontakt@choinek.pl</p>
+            </div>
         </div>
-
-        {/* Middle Side */}
-        <ul className="navbarMiddleSide">
-          <li className="navbarMiddleSideText">oferta</li>
-          <li className="navbarMiddleSideText">cennik</li>
-          <li className="navbarMiddleSideText">nasze realizacje</li>
-          <li className="navbarMiddleSideText">faq</li>
-          <li className="navbarMiddleSideText">zamów online</li>
-          <li>
-            <img
-              className="navbarMiddleSideImage"
-              src={assets.shoppingCart}
-              alt=""
-            />
-          </li>
-
-          {/* <p>Polski język</p> */}
-        </ul>
-
-        {/* Right Side */}
-        <div className="navbarRightSide">
-          <b className="navbarRightSidePhoneText">+48 123 456 789</b>
-          <p className="navbarRightSideEmailText">kontakt@choinek.pl</p>
-        </div>
-      </div>
     </div>
-  );
+  )
 };
 
 export default Navbar;

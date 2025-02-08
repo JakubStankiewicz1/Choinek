@@ -1,70 +1,143 @@
 .orderInfo {
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
-  /* width: 75%; */
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  padding-bottom: 30px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.orderInfoDataContainer {
+.orderInfoContainer {
   display: flex;
-  flex-direction: row;
-  width: 75%;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  /* background-color: aquamarine; */
-  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.orderInfoDataContainerLeft {
+.orderInfoContainerTitle {
+  padding-bottom: 55px;
+  /* padding-top: 10px; */
+  text-align: center;
+}
+
+.orderInfoContainerPart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.orderInfoContainerLeftPart {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 300px;
 }
 
-.orderInfoDataContainerLeftText1,
-.orderInfoDataContainerLeftText2,
-.orderInfoDataContainerLeftText3,
-.orderInfoDataContainerLeftText4 {
+.orderInfoContainerLeftPartTop,
+.orderInfoContainerLeftPartBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orderInfoContainerLeftPartTopText1,
+.orderInfoContainerLeftPartBottomText1,
+.orderInfoContainerLeftPartBottomText2,
+.orderInfoContainerLeftPartBottomText3 {
   color: #5f5f5f;
   font-size: 16px;
+  line-height: 1.5;
 }
 
-.porderInfoDataContainerLeftPhone {
-  font-size: 28px;
-  font-weight: 900;
-  margin-top: 25px;
-  margin-bottom: 25px;
+.orderInfoContainerLeftPartTopText1 {
+  margin-bottom: 10px;
+}
+
+.orderInfoContainerLeftPartBottomText1 {
+  margin-top: 30px;
+}
+
+.orderInfoContainerLeftPartBottomText2 {
+  margin-top: 15px;
+}
+
+.orderInfoContainerLeftPartBottomText3 {
+  margin-top: 15px;
+}
+
+.orderInfoContainerLeftPartTopText1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.orderInfoContainerLeftPartTopText2,
+.orderInfoContainerLeftPartTopText3 {
+  /* font-size: 22px; */
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.orderInfoContainerLeftPartTopText2 {
   color: #095002;
-}
-
-.orderInfoDataContainerLeftEmail {
-  font-size: 28px;
   font-weight: 900;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+
+.orderInfoContainerLeftPartTopText3 {
   color: #960000;
+  font-weight: 900;
+  font-size: 26px;
+  padding-bottom: 10px;
 }
 
-.orderInfoDataContainerLeftText2 {
-  margin-top: 35px;
-  margin-bottom: 20px;
+.orderInfoContainerRightPart {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-width: 300px;
 }
 
-.orderInfoDataContainerLeftText3 {
-  margin-top: 20px;
+.orderInfoContainerRightPartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.orderInfoDataContainerLeftText4 {
-  margin-top: 20px;
-}
 
-.orderInfoDataContainerRight {
+.orderInfoContainerRightPartNavLinkElement {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  padding: 10px;
+}
+
+.orderInfoContainerRightPartNavLinkElement:hover {
+  transform: scale(1.05);
+}
+
+.orderInfoContainerRightPartNavLinkElementImg {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.orderInfoContainerRightPartNavLinkElementText {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
 }

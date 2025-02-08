@@ -1,15 +1,15 @@
 .title {
-  display: flex; /* Ustawienie Flexbox */
-  justify-content: center; /* Wyśrodkowanie na osi X */
-  align-items: center; /* Wyśrodkowanie na osi Y (opcjonalne) */
-  margin: 0 auto; /* Usunięcie nadmiarowych marginesów */
-  width: 100%; /* Element zajmuje pełną szerokość */
-  text-align: center; /* Tekst jest wyśrodkowany w środku kontenera */
-  color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: #ff0000;
 }
 
 .titleComponentText {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center; /* Dodatkowe wyrównanie tekstu wewnątrz elementu */
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
 }
