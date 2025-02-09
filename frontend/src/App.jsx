@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Products from "./pages/Products/Products";
 import Faq from "./pages/Faq/Faq";
 import OurRealizations from "./pages/OurRealizations/OurRealizations";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="faq" element={<Faq />} />
         <Route path="our-realizations" element={<OurRealizations />} />
+        <Route path={`/product/:id`} element={<Product />} />
       </Routes>
     </div>
   );

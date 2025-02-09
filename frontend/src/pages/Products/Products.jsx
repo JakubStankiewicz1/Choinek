@@ -3,6 +3,7 @@ import "./products.css";
 import Navbar from '../../components/Navbar/Navbar';
 import Title from '../../components/Title/Title';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -26,12 +27,14 @@ const Products = () => {
             ceny: choinka.ceny ? choinka.ceny : [], // Upewnij się, że ceny są zdefiniowane
             rozmiary: choinka.rozmiary ? choinka.rozmiary : [], // Upewnij się, że rozmiary są zdefiniowane
             ilosci: choinka.ilosci ? choinka.ilosci : [], // Upewnij się, że ilości są zdefiniowane
+            zdjecia: choinka.zdjecia ? choinka.zdjecia : [], // Upewnij się, że zdjęcia są zdefiniowane
           })),
           ...produktyResponse.data.map(produkt => ({
             ...produkt,
             ceny: [produkt.cena], // Upewnij się, że ceny są w formie tablicy
             rozmiary: [], // Produkty mogą nie mieć rozmiarów
             ilosci: [0], // Ustaw domyślną ilość
+            zdjecia: [], // Produkty mogą nie mieć zdjęć
           }))
         ];
         
@@ -132,14 +135,25 @@ const Products = () => {
           {loading ? (
             <p>Ładowanie produktów...</p>
           ) : (
-            filteredProducts.map(product => (
-              <div key={product.id} className="productCard">
-                <h3>{product.nazwa}</h3>
-                <p>{product.opis}</p>
-                <p>Cena: {Math.min(...product.ceny)} PLN</p>
-                <p>Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p>
-              </div>
-            ))
+            <div className="productContainerRightPartProductsContainer">
+              {filteredProducts.map(product => (
+                <NavLink to={`/products/${product.id}`} key={product.id} className="productContainerRightPartProductsContainerElement">
+                  <div className="productItemImageContainer">
+                    {product.zdjecia.length > 0 ? (
+                      <img src={product.zdjecia[0]} alt={product.nazwa} />
+                    ) : (
+                      <img src="default-image.jpg" alt="Domyślne zdjęcie" />
+                    )}
+                  </div>
+                  <div className="productItemTextContainer">
+                    <h3 className="productItemTextContainerText">{product.nazwa}</h3>
+                    <p className="productItemInfo">{product.opis}</p>
+                    <p className="productItemInfo">Cena: {Math.min(...product.ceny)} PLN</p>
+                    <p className="productItemInfo">Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p>
+                  </div>
+                </NavLink>
+              ))}
+            </div>
           )}
         </div>
       </div>
