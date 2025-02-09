@@ -72,3 +72,22 @@
   background: linear-gradient(135deg, #138a72, #0f6c58);
   transform: scale(1.05);
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .realizations {
+    padding: 20px 10px;
+  }
+
+  .realizationGridItemImage {
+    height: 250px;
+  }
+
+  .realizationGridItemInfo h3 {
+    font-size: 1.4rem;
+  }
+
+  .realizationGridItemInfo p {
+    font-size: 0.9rem;
+  }
+}
