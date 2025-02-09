@@ -137,7 +137,7 @@ const Products = () => {
           ) : (
             <div className="productContainerRightPartProductsContainer">
               {filteredProducts.map(product => (
-                <NavLink to={`/products/${product.id}`} key={product.id} className="productContainerRightPartProductsContainerElement">
+                <NavLink to={`/product/${product.id}`} key={product.id} className="productContainerRightPartProductsContainerElement">
                   <div className="productItemImageContainer">
                     {product.zdjecia.length > 0 ? (
                       <img src={product.zdjecia[0]} alt={product.nazwa} />
