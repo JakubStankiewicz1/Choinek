@@ -8,7 +8,6 @@
     align-items: center;
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.4));
-
 }
 
 .heroVideo {
@@ -92,4 +91,50 @@
     margin-bottom: 1.2vh;
     padding-left: 1.5vh;
     position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .heroContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .heroContainerLeftSide {
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroContainerLeftSideTopHeader {
+        font-size: 3vh;
+    }
+
+    .heroContainerLeftSideTopNormal {
+        font-size: 1.8vh;
+    }
+
+    .heroContainerLeftSideBottom {
+        margin-top: 3vh;
+    }
+
+    .heroContainerLeftSideBottomBtn {
+        font-size: 1.8vh;
+        padding: 1vh 2vh;
+    }
+
+    .heroContainerRightSide {
+        align-items: center;
+        margin-top: 3vh;
+    }
+
+    .heroContainerRightSideElement {
+        font-size: 1.8vh;
+        margin-bottom: 1vh;
+    }
 }
