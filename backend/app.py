@@ -289,8 +289,6 @@ def delete_produkt(produkt_id):
 
     return jsonify({"message": "Produkt usunięty!"}), 200
 
-
-
 @app.route('/edit_produkt/<int:produkt_id>', methods=['PUT'])
 def edit_produkt(produkt_id):
     """ Edytuje dane produktu w bazie danych """
@@ -363,51 +361,6 @@ def get_choinka_by_id(choinka_id):
     
     return jsonify(choinka)
 
-@app.route('/choinka/<int:choinka_id>', methods=['GET'])
-def get_choinka_by_id(choinka_id):
-    """ Pobiera szczegóły choinki po ID """
-    conn = mysql.connector.connect(**db_config)
-    cursor = conn.cursor(dictionary=True)
-    
-    query = """
-    SELECT c.id, c.nazwa, c.opis, c.miasto, c.data_dodania, c.gwiazdki, c.bestseller, kn.nazwa AS kategoria_nadrzedna, 
-           kp.nazwa AS kategoria_podrzedna, 
-           GROUP_CONCAT(DISTINCT z.url ORDER BY z.id ASC) AS zdjecia, 
-           GROUP_CONCAT(DISTINCT r.zakres ORDER BY r.id ASC) AS rozmiary, 
-           GROUP_CONCAT(DISTINCT p.cena ORDER BY r.id ASC) AS ceny,
-           GROUP_CONCAT(DISTINCT p.ilosc_dostepnych ORDER BY r.id ASC) AS ilosci,
-           GROUP_CONCAT(DISTINCT c.informacja_1 ORDER BY c.id ASC) AS informacja_1,
-           GROUP_CONCAT(DISTINCT c.informacja_2 ORDER BY c.id ASC) AS informacja_2,
-           GROUP_CONCAT(DISTINCT c.informacja_3 ORDER BY c.id ASC) AS informacja_3
-    FROM choinki c
-    LEFT JOIN kategoria_nadrzedna kn ON c.kategoria_nadrzedna_id = kn.id
-    LEFT JOIN kategoria_podrzedna kp ON c.kategoria_podrzedna_id = kp.id
-    LEFT JOIN zdjecia_choinki z ON c.id = z.choinka_id
-    LEFT JOIN ceny_choinek p ON c.id = p.choinka_id
-    LEFT JOIN rozmiary_choinek r ON p.rozmiar_id = r.id
-    WHERE c.id = %s
-    GROUP BY c.id;
-    """
-    
-    cursor.execute(query, (choinka_id,))
-    choinka = cursor.fetchone()
-    
-    if choinka:
-        choinka["zdjecia"] = choinka["zdjecia"].split(",") if choinka["zdjecia"] else []
-        choinka["rozmiary"] = choinka["rozmiary"].split(",") if choinka["rozmiary"] else []
-        choinka["ceny"] = choinka["ceny"].split(",") if choinka["ceny"] else []
-        choinka["ilosci"] = choinka["ilosci"].split(",") if choinka["ilosci"] else []
-        choinka["informacja_1"] = choinka["informacja_1"].split(",") if choinka["informacja_1"] else []
-        choinka["informacja_2"] = choinka["informacja_2"].split(",") if choinka["informacja_2"] else []
-        choinka["informacja_3"] = choinka["informacja_3"].split(",") if choinka["informacja_3"] else []
-    
-    cursor.close()
-    conn.close()
-    
-    if choinka:
-        return jsonify(choinka)
-    else:
-        return make_response('Choinka not found', 404)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)
