@@ -1,9 +1,7 @@
 .fotter {
     background-color: #f8f8f8;
-    /* padding:  20px; */
     padding-top: 20px;
     padding-bottom: 25px;
-    /* border-top: 2px solid #94040b; */
     font-family: Arial, sans-serif;
 }
 
@@ -18,7 +16,6 @@
     justify-content: space-between;
     padding-top: 25px;
 }
-
 
 .fotterSection {
     flex: 1;
@@ -90,4 +87,25 @@
     line-height: 1.4;
     color: #555;
     text-align: justify;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .fotterInfoSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotterSection {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .fotterSocialMedia {
+        justify-content: center;
+    }
+
+    .fotterPaymentIcons {
+        justify-content: center;
+    }
 }
