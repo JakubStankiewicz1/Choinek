@@ -12,12 +12,14 @@ const Product = () => {
   const [deliveryOption, setDeliveryOption] = useState("najszybciej");
   const [recyclingOption, setRecyclingOption] = useState("brak");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedSize, setSelectedSize] = useState("");
 
   useEffect(() => {
     axios.get(`http://127.0.0.1:5000/choinka/${id}`)
       .then(response => {
         setProduct(response.data);
         setSelectedImage(response.data.zdjecia?.[0]);
+        setSelectedSize(response.data.rozmiary?.[0]);
       })
       .catch(error => {
         console.error("Błąd pobierania danych:", error);
@@ -35,7 +37,7 @@ const Product = () => {
 
   const handleAddToCart = () => {
     // Logika dodawania do koszyka
-    console.log("Dodano do koszyka:", product.nazwa, "Ilość:", quantity);
+    console.log("Dodano do koszyka:", product.nazwa, "Ilość:", quantity, "Rozmiar:", selectedSize);
   };
 
   return (
@@ -57,13 +59,14 @@ const Product = () => {
         </div>
         <div className="productDetails">
           <h1>{product.nazwa}</h1>
+          <p className="productPrice">Cena: {product.ceny[0]} PLN</p>
           <p>Lokalizacja: {product.miasto}</p>
           <p>Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p>
-          <p>Sposoby i koszty dostawy: {product.dostawa}</p>
-          <p>Recykling - odbiór choinki po Świętach:</p>
-          <select value={recyclingOption} onChange={(e) => setRecyclingOption(e.target.value)}>
-            <option value="brak">Brak</option>
-            <option value="tak">Tak, +30zł</option>
+          <p>Wybierz rozmiar choinki:</p>
+          <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
+            {product.rozmiary?.map((size, index) => (
+              <option key={index} value={size}>{size}</option>
+            ))}
           </select>
           <p>Opcje wyboru daty wysyłki:</p>
           <select value={deliveryOption} onChange={(e) => setDeliveryOption(e.target.value)}>
@@ -71,14 +74,19 @@ const Product = () => {
             <option value="za_tydzien">Za tydzień</option>
             <option value="za_2_tygodnie">Za 2 tygodnie</option>
           </select>
+          <p>Recykling - odbiór choinki po Świętach:</p>
+          <select value={recyclingOption} onChange={(e) => setRecyclingOption(e.target.value)}>
+            <option value="brak">Brak</option>
+            <option value="tak">Tak, +30zł</option>
+          </select>
           <div className="quantityContainer">
             <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
             <input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
             <button onClick={() => setQuantity(quantity + 1)}>+</button>
           </div>
           <button className="addToCartButton" onClick={handleAddToCart}>Dodaj do koszyka</button>
-          <p>Opis:</p>
-          <p>{product.opis}</p>
+          <p className="productDescriptionTitle">Opis:</p>
+          <p className="productDescription">{product.opis}</p>
         </div>
       </div>
       <div className="relatedProducts">
