@@ -36,7 +36,6 @@ const Product = () => {
   }
 
   const handleAddToCart = () => {
-    // Logika dodawania do koszyka
     console.log("Dodano do koszyka:", product.nazwa, "Ilość:", quantity, "Rozmiar:", selectedSize);
   };
 
@@ -80,9 +79,9 @@ const Product = () => {
             <option value="tak">Tak, +30zł</option>
           </select>
           <div className="quantityContainer">
-            <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
+            <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)} className="quantityContainerBtn">-</button>
             <input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
-            <button onClick={() => setQuantity(quantity + 1)}>+</button>
+            <button onClick={() => setQuantity(quantity + 1)} className="quantityContainerBtn">+</button>
           </div>
           <button className="addToCartButton" onClick={handleAddToCart}>Dodaj do koszyka</button>
           <p className="productDescriptionTitle">Opis:</p>
