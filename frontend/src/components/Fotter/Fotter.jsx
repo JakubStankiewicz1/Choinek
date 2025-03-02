@@ -41,21 +41,20 @@ const Fotter = () => {
                 <div className="fotterSection fotterMiddle">
                     <h4 className="fotterHeading">choinek.pl</h4>
                     <address>
-                        <p>BW INWESTMENTS 1 Sp. z o.o.</p>
-                        <p>ul. Foksal 3/5</p>
-                        <p>00-366 Warszawa</p>
-                        <p>NIP: 5252763645</p>
-                        <p>Tel: +48 690 596 694</p>
+                        <p>Choinek - sprzedaż arytkułów świątecznych</p>
+                        <p>ul. Wróblewskiego 27</p>
+                        <p>51-627 Wrocław</p>
+                        <p>Tel: +48 123 123 123</p>
                     </address>
                 </div>
 
                 {/* Right Section */}
                 <div className="fotterSection fotterRight">
                     <div className="fotterPaymentIcons">
-                        <img src={assets.mastercard} alt="Mastercard" />
-                        <img src={assets.visa} alt="Visa" />
-                        <img src={assets.stripe} alt="Stripe" />
-                        <img src={assets.paypal} alt="" />
+                        <img src={assets.mastercard} alt="" className="fotterPaymentIconsEle" />
+                        <img src={assets.visa} alt="" className="fotterPaymentIconsEle" />
+                        <img src={assets.stripe} alt="" className="fotterPaymentIconsEle" />
+                        <img src={assets.paypal} alt="" className="fotterPaymentIconsEle" />
                     </div>
 
                     <p className="fotterNote">

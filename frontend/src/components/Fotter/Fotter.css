@@ -1,6 +1,6 @@
 .fotter {
     background-color: #f8f8f8;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 25px;
     font-family: Arial, sans-serif;
 }
@@ -71,9 +71,11 @@
 
 .fotterPaymentIcons {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    /* gap: 10px; */
     margin-top: 15px;
+    width: 80%
 }
 
 .fotterPaymentIcons img {
@@ -89,7 +91,16 @@
     text-align: justify;
 }
 
-/* Responsive styles */
+.fotterPaymentIconsEle {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fotterPaymentIconsEle:hover {
+    transform: scale(1.1)
+}
+
+
 @media (max-width: 768px) {
     .fotterInfoSection {
         flex-direction: column;
