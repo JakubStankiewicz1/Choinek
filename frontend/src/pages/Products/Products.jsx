@@ -147,9 +147,15 @@ const Products = () => {
                 </div>
                 <div className="productDetails">
                   <h3>{product.nazwa}</h3>
-                  <p>{product.opis}</p>
+                  {
+                    product.opis.length < 30 ?
+                    <p>{product.opis}</p>
+                    :<p>{product.opis.substring(0,30)}...</p>
+                  }
+             
+             
                   <p>Cena: {Math.min(...product.ceny)} PLN</p>
-                  <p>Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p>
+                  {/* <p>Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p> */}
                 </div>
               </NavLink>
             ))}
