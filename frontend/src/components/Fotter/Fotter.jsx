@@ -40,11 +40,11 @@ const Fotter = () => {
                 {/* Middle Section */}
                 <div className="fotterSection fotterMiddle">
                     <h4 className="fotterHeading">choinek.pl</h4>
-                    <address>
-                        <p>Choinek - sprzedaż arytkułów świątecznych</p>
-                        <p>ul. Wróblewskiego 27</p>
-                        <p>51-627 Wrocław</p>
-                        <p>Tel: +48 123 123 123</p>
+                    <address className="fotterHeadingAddress">
+                        <p className="fotterHeadingAddressElement">Choinek - sprzedaż arytkułów świątecznych</p>
+                        <p className="fotterHeadingAddressElement">ul. Wróblewskiego 27</p>
+                        <p className="fotterHeadingAddressElement">51-627 Wrocław</p>
+                        <p className="fotterHeadingAddressElement">Tel: +48 123 123 123</p>
                     </address>
                 </div>
 
