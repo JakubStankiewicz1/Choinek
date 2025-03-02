@@ -24,8 +24,10 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s;
+  border: none;
+  outline: none;
 }
 
-.offertContainerProductContainerElement:hover {
+/* .offertContainerProductContainerElement:hover {
   transform: scale(1.05);
-}
+} */

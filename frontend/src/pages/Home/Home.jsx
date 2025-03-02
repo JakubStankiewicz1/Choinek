@@ -11,8 +11,6 @@ import Fotter from '../../components/Fotter/Fotter';
 const Home = () => {
   return (
     <div>
-
-        {/* <Navbar /> */}
         <Hero />
 
         <Offert />
