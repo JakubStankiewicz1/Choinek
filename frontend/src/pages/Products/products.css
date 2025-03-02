@@ -28,9 +28,9 @@
   font-weight: bold;
 }
 
-.filterSection input[type="range"] {
+/* .filterSection input[type="range"] {
   width: 100%;
-}
+} */
 
 .filterSection select {
   padding: 10px;

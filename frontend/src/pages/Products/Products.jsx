@@ -88,7 +88,7 @@ const Products = () => {
   return (
     <div className="products">
       <div className="filters">
-        <div className="filterSection">
+        {/* <div className="filterSection">
           <label>Cena:</label>
           <input
             type="range"
@@ -104,12 +104,12 @@ const Products = () => {
             onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
           />
           <span>{priceRange[0]} PLN - {priceRange[1]} PLN</span>
-        </div>
+        </div> */}
         <div className="filterSection">
           <label>Kategoria:</label>
           <select value={category} onChange={handleCategoryChange}>
             <option value="">Wszystkie</option>
-            <option value="Kategoria Nadrzędna 1">Kategoria Nadrzędna 1</option>
+            <option value="Kategoria Nadrzędna 1">Choinki</option>
             <option value="Kategoria Nadrzędna 2">Kategoria Nadrzędna 2</option>
           </select>
         </div>
@@ -154,7 +154,7 @@ const Products = () => {
                   }
              
              
-                  <p>Cena: {Math.min(...product.ceny)} PLN</p>
+                  <p>Cena od: {Math.min(...product.ceny)} PLN</p>
                   {/* <p>Dostępność: {product.ilosci[0] > 0 ? 'Dostępne' : 'Niedostępne'}</p> */}
                 </div>
               </NavLink>
