@@ -1,0 +1,115 @@
+.cartContainer {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    gap: 40px;
+}
+
+.cartContainerLeft {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+    background-color: lightgreen;
+}
+
+.cartContainerLeftRight {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    background-color: lightcoral;
+}
+
+.cartContainerItemsItem {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+}
+
+.cartContainerItemsItemImage {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+.cartContainerItemsItemDetails {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cartContainerItemsItemDetailsHeaderText {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.cartContainerItemsItemDetailsTextOne,
+.cartContainerItemsItemDetailsTextTwo,
+.cartContainerItemsItemDetailsTextThree {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.cartContainerItemsItemDetailsControls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cartContainerItemsItemDetailsControls button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cartContainerItemsItemDetailsControls span {
+    margin: 0 10px;
+}
+
+.cartContainerItemsItemPrice {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.cartContainerItemsItemDetailsDelete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cartContainerLeftBottom {
+    background-color: lightgoldenrodyellow;
+}
+
+.cartContainerDeleteButton,
+.cartContainerCheckoutButton {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cartContainerCheckoutButton {
+    background-color: green;
+    color: white;
+}
