@@ -1,4 +1,4 @@
-.realizations {
+.realizationsContainer {
   max-width: 90%;
   margin: 0 auto;
   padding: 40px 20px;
@@ -9,20 +9,21 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .realizationGridItem {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .realizationGridItem:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .realizationGridItemImage {
@@ -53,7 +54,6 @@
   line-height: 1.6;
 }
 
-/* See More Button */
 .see-more-button {
   display: inline-block;
   margin-top: 40px;
@@ -62,8 +62,6 @@
   font-weight: 600;
   color: #fff;
   background: linear-gradient(135deg, #16a085, #138a72);
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -73,7 +71,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .realizations {
     padding: 20px 10px;

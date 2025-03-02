@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './faq.css';
 import Title from '../../components/Title/Title';
 
+import Fotter from '../../components/Fotter/Fotter';
+
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -86,6 +88,9 @@ const Faq = () => {
           </div>
         </div>
       </div>
+
+      <Fotter />
+
     </div>
   );
 };

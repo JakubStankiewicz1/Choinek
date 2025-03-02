@@ -82,24 +82,30 @@ const OurRealizations = () => {
 
   return (
     <div className="realizations">
+
+      <div className="realizationsContainer">
       
-      <Title text={"Nasze realizacje"} />
+        <Title text={"Nasze realizacje"} />
 
-      <div className="realizationsGrid">
+        <div className="realizationsGrid">
 
-        {
-          realizationsData.map((realization) => (
-            <div key={realization.id} className="realizationGridItem">
-              <img src={realization.image} alt={realization.title} className="realizationGridItemImage" />
-              <div className="realizationGridItemInfo">
-                <h3>{realization.title}</h3>
-                <p>{realization.description}</p>
+          {
+            realizationsData.map((realization) => (
+              <div key={realization.id} className="realizationGridItem">
+                <img src={realization.image} alt={realization.title} className="realizationGridItemImage" />
+                <div className="realizationGridItemInfo">
+                  <h3>{realization.title}</h3>
+                  <p>{realization.description}</p>
+                </div>
               </div>
-            </div>
-          ))
-        }
+            ))
+          }
+
+        </div>
 
       </div>
+
+      <Fotter />
 
     </div>
   );
