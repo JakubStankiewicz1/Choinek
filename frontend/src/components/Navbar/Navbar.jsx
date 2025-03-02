@@ -24,10 +24,10 @@ const Navbar = () => {
                 {/* <p className="navbarMiddlePartElement">cennik<div className="navbarMiddlePartUnderline" /></p> */}
                 <NavLink to="/our-realizations" className="navbarMiddlePartElement">nasze realizacje<div className="navbarMiddlePartUnderline" /></NavLink>
                 <NavLink to="/faq" className="navbarMiddlePartElement">faq<div className="navbarMiddlePartUnderline" /></NavLink>
-                <div className="navbarMiddlePartElement">
+                <NavLink to="/cart" className="navbarMiddlePartElement">
                     <img src={assets.shoppingCart} alt="" className="navbarMiddlePartElementImg" />
                     <div className="navbarMiddlePartUnderline" />
-                </div>
+                </NavLink>
             </div>
             <div className="navbarRightPart">
                 <p className="navbarRightPartTop">+48 123 456 789</p>

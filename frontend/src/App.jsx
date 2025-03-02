@@ -5,6 +5,7 @@ import Products from "./pages/Products/Products";
 import Faq from "./pages/Faq/Faq";
 import OurRealizations from "./pages/OurRealizations/OurRealizations";
 import Product from "./pages/Product/Product";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="faq" element={<Faq />} />
         <Route path="our-realizations" element={<OurRealizations />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path={`/product/:id`} element={<Product />} />
       </Routes>
     </div>

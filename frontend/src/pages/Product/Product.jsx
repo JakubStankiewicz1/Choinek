@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
+import { useShopContext } from '../../ShopContext/ShopContext';
 import "./product.css";
 import Fotter from "../../components/Fotter/Fotter";
 
@@ -13,6 +14,7 @@ const Product = () => {
   const [recyclingOption, setRecyclingOption] = useState("brak");
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState("");
+  const { addToCart } = useShopContext();
 
   useEffect(() => {
     axios.get(`http://127.0.0.1:5000/choinka/${id}`)
@@ -36,6 +38,7 @@ const Product = () => {
   }
 
   const handleAddToCart = () => {
+    addToCart(product, quantity, selectedSize);
     console.log("Dodano do koszyka:", product.nazwa, "Ilość:", quantity, "Rozmiar:", selectedSize);
   };
 
