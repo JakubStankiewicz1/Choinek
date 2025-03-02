@@ -69,6 +69,18 @@
     height: auto;
 }
 
+.cartBadge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 1.2vh;
+    font-weight: 700;
+}
+
 .navbarRightPart {
     display: flex;
     flex-direction: column;

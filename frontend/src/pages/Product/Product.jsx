@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
 import { useShopContext } from '../../ShopContext/ShopContext';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./product.css";
 import Fotter from "../../components/Fotter/Fotter";
 
@@ -39,11 +41,21 @@ const Product = () => {
 
   const handleAddToCart = () => {
     addToCart(product, quantity, selectedSize);
+    toast.success("Dodano do koszyka!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     console.log("Dodano do koszyka:", product.nazwa, "Ilość:", quantity, "Rozmiar:", selectedSize);
   };
 
   return (
     <div className="product">
+      <ToastContainer />
       <div className="productContainer">
         <div className="productImageContainer">
           <div className="productImageContainerBigImg">
