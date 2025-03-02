@@ -43,7 +43,9 @@ const Product = () => {
     <div className="product">
       <div className="productContainer">
         <div className="productImageContainer">
-          <img src={selectedImage} alt={product.nazwa} className="productImage" />
+          <div className="productImageContainerBigImg">
+            <img src={selectedImage} alt={product.nazwa} className="productImage" />
+          </div>
           <div className="productImageThumbnails">
             {product.zdjecia?.map((image, index) => (
               <img
@@ -99,6 +101,9 @@ const Product = () => {
           ))}
         </div>
       </div>
+
+      <div className="productHrDivider" />
+
       <Fotter />
     </div>
   );
