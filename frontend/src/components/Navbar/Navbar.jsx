@@ -21,7 +21,7 @@ const Navbar = () => {
             </div>
             <div className={`navbarMiddlePart ${menuOpen ? 'active' : ''}`}>
                 <p className="navbarMiddlePartElement"><NavLink to="/products">oferta</NavLink><div className="navbarMiddlePartUnderline" /></p>
-                <p className="navbarMiddlePartElement">cennik<div className="navbarMiddlePartUnderline" /></p>
+                {/* <p className="navbarMiddlePartElement">cennik<div className="navbarMiddlePartUnderline" /></p> */}
                 <NavLink to="/our-realizations" className="navbarMiddlePartElement">nasze realizacje<div className="navbarMiddlePartUnderline" /></NavLink>
                 <NavLink to="/faq" className="navbarMiddlePartElement">faq<div className="navbarMiddlePartUnderline" /></NavLink>
                 <div className="navbarMiddlePartElement">
