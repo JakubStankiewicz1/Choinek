@@ -13,7 +13,7 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 db_config = {
     "host": "localhost",
     "user": "root",
-    "password": "root",
+    "password": "Broniewskiego14",
     "database": "choinek_db"
 }
 
