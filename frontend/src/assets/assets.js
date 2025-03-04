@@ -23,6 +23,13 @@ import twitter from "./twitter.png";
 import youtube from "./youtube.png";
 import tikTok from "./tik-tok.png";
 
+import telephone from "./telephone.png";
+
+
+import van from "./van.png";
+import lock from "./lock.png";
+import productReturn from "./product-return.png";
+
 export default {
     shoppingCart,
     heroBackgroundVideo,
@@ -42,4 +49,8 @@ export default {
     twitter,
     youtube,
     tikTok,
-}
+    telephone,
+    van,
+    lock,
+    productReturn,
+};
